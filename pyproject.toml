@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "veclint"
+version = "0.1.0"
+description = "Offline integrity linter for a vector index and its corpus: finds the defects that degrade ranking without raising an error."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Ethan Haas", email = "ethanzhaas@gmail.com" }]
+dependencies = ["numpy>=1.24"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+veclint = "veclint.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["veclint*"]

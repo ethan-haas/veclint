@@ -1,0 +1,5 @@
+# veclint is NOT stdlib-only. numpy is a hard runtime dependency (used for
+# vector arithmetic: norms, dot products, non-finite checks). pytest is a
+# dev/test-only dependency.
+numpy==2.4.1
+pytest==8.4.2
